@@ -1,7 +1,5 @@
 package com.test.utils;
 
-import java.util.Scanner;
-
 public class SetupResourceAPI {
 
     public static String path_user = "users/";
@@ -9,7 +7,7 @@ public class SetupResourceAPI {
     public static String baseURI = "https://api.github.com/";
     public static String userName = " ";
 
-    /*Below methods accepts the gitusername via
+    /*Below method accepts the gitusername via
     command line and need to pass the value via mvn command*/
 
     public static String getUserName() {
