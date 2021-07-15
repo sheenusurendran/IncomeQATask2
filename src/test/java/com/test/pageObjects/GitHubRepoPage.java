@@ -22,7 +22,6 @@ public class GitHubRepoPage extends Base {
     private WebElement lbl_DynamicRepo;
 
     public GitHubRepoPage(WebDriver driver, WebDriverWait wait) {
-
         super(driver, wait);
         PageFactory.initElements(driver, this);
     }
@@ -38,13 +37,12 @@ public class GitHubRepoPage extends Base {
 
             }
         } catch (Exception ex) {
-
+            System.out.println(ex.getStackTrace());
         }
     }
 
     public WebElement getDynamicElementforRepo() {
         return lbl_DynamicRepo.findElement(By.xpath("//*[contains(@href, '" + repoName + "')]"));
-
     }
 
     public String getStarsFromUI() {

@@ -1,19 +1,17 @@
 package com.test.pageObjects;
 
 import com.test.utils.Base;
-
-import java.util.List;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class GitHubHomePage extends Base {
-	public GitHubHomePage(WebDriver driver, WebDriverWait wait) {
+import java.util.List;
 
+public class GitHubHomePage extends Base {
+
+	public GitHubHomePage(WebDriver driver, WebDriverWait wait) {
 		super(driver, wait);
 		PageFactory.initElements(driver, this);
 	}
@@ -38,6 +36,5 @@ public class GitHubHomePage extends Base {
 				lnk_Repositories.click();
 			}
 		}
-
 	}
 }

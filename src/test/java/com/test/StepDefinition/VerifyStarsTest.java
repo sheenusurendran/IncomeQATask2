@@ -2,13 +2,13 @@ package com.test.StepDefinition;
 
 import com.test.pageObjects.GitHubHomePage;
 import com.test.pageObjects.GitHubRepoPage;
+import com.test.utils.FetchFromApi;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import com.test.utils.FormatStars;
 
 public class VerifyStarsTest {
 
@@ -34,7 +34,7 @@ public class VerifyStarsTest {
 	public void the_Stars_displayed_is_matching_with_the_Git_Hub_API_response() throws Throwable {
 		GitHubRepoPage repoPage = new GitHubRepoPage(driver, wait);
 		Assert.assertTrue("Stars displayed on UI is not matching with API",
-		repoPage.getStarsFromUI().equalsIgnoreCase(FormatStars.FindStars()));
+				repoPage.getStarsFromUI().equalsIgnoreCase(FetchFromApi.getStars()));
 	}
 
 }

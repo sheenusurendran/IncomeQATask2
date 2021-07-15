@@ -10,7 +10,6 @@ public class PropertyReader {
     private static final String CONFIGFILEPATH= "./config.properties";
 
     public static String getValue(String key) throws Exception {
-
         File file = new File(CONFIGFILEPATH);
         FileInputStream fis = new FileInputStream(file);
         Properties prop = new Properties();

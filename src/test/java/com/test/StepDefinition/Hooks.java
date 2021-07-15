@@ -1,7 +1,7 @@
 package com.test.StepDefinition;
 
 import com.test.utils.PropertyReader;
-import com.test.utils.SetupResourceAPI;
+import com.test.utils.ResourceAPI;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -11,6 +11,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
@@ -35,7 +36,7 @@ import java.util.concurrent.TimeUnit;
                     driver = new ChromeDriver(capabilities);
                 }
 
-			/* ToDo - implement other drivers
+			/* ToDo - implement other drivers if required
 			case "firefox": {
 				driver = new FirefoxDriver(capabilities);
 			}*/
@@ -47,7 +48,7 @@ import java.util.concurrent.TimeUnit;
             driver.manage().timeouts().setScriptTimeout(prop.getTimeout(), TimeUnit.SECONDS);
             driver.manage().deleteAllCookies();
             driver.manage().window().maximize();
-            driver.get(PropertyReader.getValue("url")+ SetupResourceAPI.getUserName());
+            driver.get(PropertyReader.getValue("url") + ResourceAPI.getUserName());
         }
 
         @After
