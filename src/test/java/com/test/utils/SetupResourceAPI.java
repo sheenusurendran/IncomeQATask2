@@ -6,7 +6,6 @@ public class SetupResourceAPI {
 
     public static String path_user = "users/";
     public static String path_repo = "/repos";
-    //public static String path_release = "/git/refs/tags";
     public static String baseURI = "https://api.github.com/";
     public static String userName = " ";
 
