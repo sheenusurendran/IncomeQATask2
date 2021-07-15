@@ -1,0 +1,7 @@
+Feature:  I want to validate the stars displayed on the UI with GitHubAPI for any of the user repo
+
+  Scenario : Verify that stars displayed is matching with the API response
+    Given user is on users HomePage
+    When user clicked on any of the Repo
+    Then the Stars displayed is matching with the Git Hub API response
+
