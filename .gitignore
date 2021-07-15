@@ -1,4 +1,11 @@
 # Project exclude paths
 /target/
 
+#Intellij
 .idea
+*.iml
+
+# Eclipse
+.settings
+.classpath
+.project
