@@ -11,17 +11,11 @@ public class SetupResourceAPI {
     public static String userName = " ";
 
     /*Below methods accepts the gitusername via
-    command line and need to pass the value via mvn command
+    command line and need to pass the value via mvn command*/
 
     public static String getUserName() {
         userName = System.getProperty("Git_user");
         return userName;
-    }  */
-
-    public static String getUserName() {
-        System.out.println("Enter your git username:");
-        Scanner input = new Scanner(System.in);
-        return  input.nextLine();
     }
 }
 
