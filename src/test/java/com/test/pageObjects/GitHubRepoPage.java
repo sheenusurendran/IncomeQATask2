@@ -46,7 +46,6 @@ public class GitHubRepoPage extends Base {
     }
 
     public String getStarsFromUI() {
-        String starsCountUI = lbl_StarCount.getText();
-        return starsCountUI;
+        return lbl_StarCount.getText();
     }
 }

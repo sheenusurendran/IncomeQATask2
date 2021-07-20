@@ -4,10 +4,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.util.Properties;
 
-
 public class PropertyReader {
 
-    private static final String CONFIGFILEPATH= "./config.properties";
+    private static final String CONFIGFILEPATH = "./config.properties";
 
     public static String getValue(String key) throws Exception {
         File file = new File(CONFIGFILEPATH);

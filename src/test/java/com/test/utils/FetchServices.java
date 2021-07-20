@@ -1,16 +1,16 @@
 package com.test.utils;
 
-import com.test.services.GitHubDetails;
+import com.test.services.GitHubServices;
 
-import java.util.List;
+import java.util.Map;
 
-public class FetchFromApi {
+public class FetchServices {
+
     public static int starsRecievedFromAPI;
-    public static String starsAPI;
 
     public static String getStars() {
-        List<String> repoStars = GitHubDetails.getGitHubUserDetails();
-        starsRecievedFromAPI = Integer.parseInt(repoStars.get(1));
+        Map<String, String> repoDetails = GitHubServices.getRepositoryDetails();
+        starsRecievedFromAPI = Integer.parseInt(repoDetails.get("noOfStars"));
         int baseLimit = 1000;
         if (starsRecievedFromAPI >= baseLimit) {
             starsRecievedFromAPI = (int) Math.ceil((double) starsRecievedFromAPI / baseLimit);
