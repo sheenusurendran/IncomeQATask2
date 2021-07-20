@@ -19,7 +19,7 @@ public class GitHubRepoPage extends Base {
     @FindBy(xpath = "//a[contains(@href ,'stargazers')][contains(@class, 'social-count')]")
     public WebElement lbl_StarCount;
     @FindBy(xpath = "//*[contains(@class, 'wb-break-all')]")
-    private WebElement lbl_DynamicRepo;
+    public WebElement lbl_DynamicRepo;
 
     public GitHubRepoPage(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);

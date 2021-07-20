@@ -23,15 +23,15 @@ import java.util.concurrent.TimeUnit;
         public void LaunchUrl() throws Exception {
             PropertyReader prop = new PropertyReader();
             DesiredCapabilities capabilities = new DesiredCapabilities();
-            String browsername = PropertyReader.getValue("browser");
-            capabilities.setBrowserName(browsername);
+            String browserName = PropertyReader.getValue("browser");
+            capabilities.setBrowserName(browserName);
             HashMap<String, String> driverDetails = new HashMap<String, String>();
             driverDetails.put("chrome", "webdriver.chrome.driver");
             driverDetails.put("firefox", "webdriver.gecko.driver");
-            String driverPath = System.getProperty("user.dir") + "/resources/driver/" + browsername;
-            System.setProperty(driverDetails.get(browsername), driverPath);
+            String driverPath = System.getProperty("user.dir") + "/resources/driver/" + browserName;
+            System.setProperty(driverDetails.get(browserName), driverPath);
 
-            switch (browsername) {
+            switch (browserName) {
                 case "chrome": {
                     driver = new ChromeDriver(capabilities);
                 }
@@ -42,7 +42,6 @@ import java.util.concurrent.TimeUnit;
 			}*/
                 break;
                 default:
-                    driver = new ChromeDriver(capabilities);
             }
             driver.manage().timeouts().implicitlyWait(prop.getTimeout(), TimeUnit.SECONDS);
             driver.manage().timeouts().setScriptTimeout(prop.getTimeout(), TimeUnit.SECONDS);

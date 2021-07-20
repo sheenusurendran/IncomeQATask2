@@ -17,13 +17,13 @@ public class GitHubHomePage extends Base {
 	}
 
 	@FindBy(xpath = "//a[contains(@href,'?tab=repositories')]")
-	private WebElement lnk_Repositories;
+	public WebElement lnk_Repositories;
 
 	@FindBy(xpath = "//input[@id='your-repos-filter']")
-	private List<WebElement> txt_FindRepository;
+	public List<WebElement> txt_FindRepository;
 
 	@FindBy(xpath = "//a[contains(text(),'Sign in')]")
-	private WebElement lnk_Signin;
+	public WebElement lnk_Signin;
 
 	public boolean gitHubHomePageIsDisplayed() {
 		return lnk_Signin.isDisplayed();
