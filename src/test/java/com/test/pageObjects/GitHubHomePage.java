@@ -13,6 +13,7 @@ public class GitHubHomePage extends Base {
 
 	public GitHubHomePage(WebDriver driver, WebDriverWait wait) {
 		super(driver, wait);
+		//below line initializes the page element
 		PageFactory.initElements(driver, this);
 	}
 
@@ -26,6 +27,7 @@ public class GitHubHomePage extends Base {
 	public WebElement lnk_Signin;
 
 	public boolean gitHubHomePageIsDisplayed() {
+		//WaitUntilElementVisible(lnk_Signin);
 		return lnk_Signin.isDisplayed();
 	}
 

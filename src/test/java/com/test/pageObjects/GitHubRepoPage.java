@@ -23,6 +23,7 @@ public class GitHubRepoPage extends Base {
 
     public GitHubRepoPage(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
+        // Below initializes the page element so that you can work directly on the element
         PageFactory.initElements(driver, this);
     }
 

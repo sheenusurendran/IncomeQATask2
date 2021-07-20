@@ -14,8 +14,14 @@ public class Base {
         Base.wait = wait;
     }
 
+    // Fluent wait if any of the elements requires extra time to load
     protected void WaitUntilElementVisible(WebElement element) {
-        wait.until(ExpectedConditions.visibilityOf(element));
+        try {
+            PropertyReader prop = new PropertyReader();
+            wait = new WebDriverWait(driver, prop.getTimeout());
+            wait.until(ExpectedConditions.visibilityOf(element));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
-
 }

@@ -13,8 +13,8 @@ public class FetchServices {
         starsRecievedFromAPI = Integer.parseInt(repoDetails.get("noOfStars"));
         int baseLimit = 1000;
         if (starsRecievedFromAPI >= baseLimit) {
-            starsRecievedFromAPI = (int) Math.ceil((double) starsRecievedFromAPI / baseLimit);
-            return Integer.toString(starsRecievedFromAPI) + "k";
+            starsRecievedFromAPI = (int) Math.round((double) starsRecievedFromAPI / baseLimit);
+            return starsRecievedFromAPI + "k";
         }
         return Integer.toString(starsRecievedFromAPI);
     }
